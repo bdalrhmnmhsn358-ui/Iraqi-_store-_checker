@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>فاحص المتاجر العراقية</title>
+</head>
+
+<body>
+  <h1>فاحص المتاجر العراقية</h1>
+  <p>أداة تساعدك على فحص المتاجر قبل الشراء.</p>
+
+  <input type="text" placeholder="اكتب اسم المتجر">
+  <button>فحص المتجر</button>
+</body>
+</html>
