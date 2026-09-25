@@ -4,13 +4,111 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>فاحص المتاجر العراقية</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    p {
+      text-align: center;
+      color: #666;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px;
+      margin-top: 15px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 8px;
+      background: #222;
+      color: white;
+      font-size: 17px;
+      cursor: pointer;
+    }
+
+    #result {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 8px;
+      background: #f1f1f1;
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
-  <h1>فاحص المتاجر العراقية</h1>
-  <p>أداة تساعدك على فحص المتاجر العراقية قبل الشراء.</p>
 
-  <input type="text" placeholder="اكتب اسم المتجر">
-  <button>فحص المتجر</button>
+  <div class="container">
+
+    <h1>🔎 فاحص المتاجر العراقية</h1>
+
+    <p>
+      افحص معلومات المتجر قبل الشراء
+    </p>
+
+    <input
+      type="text"
+      id="store"
+      placeholder="اكتب اسم المتجر أو الصفحة"
+    >
+
+    <button onclick="checkStore()">
+      فحص المتجر
+    </button>
+
+    <div id="result"></div>
+
+  </div>
+
+  <script>
+    function checkStore() {
+
+      const store = document.getElementById("store").value;
+      const result = document.getElementById("result");
+
+      if (store.trim() === "") {
+        result.style.display = "block";
+        result.innerHTML = "⚠️ اكتب اسم المتجر أولاً";
+        return;
+      }
+
+      result.style.display = "block";
+
+      result.innerHTML =
+        "🔍 جاري فحص المتجر: <strong>" +
+        store +
+        "</strong><br><br>" +
+        "📊 سيتم لاحقاً إضافة فحص الأسعار ومؤشرات الثقة والمخاطر.";
+    }
+  </script>
+
 </body>
 </html>
